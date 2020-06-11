@@ -1,0 +1,14 @@
+img[:] = (0, 0, 192) #B:0 G:0 R:192
+text = '恭賀\n新囍'
+fontpath = r'C:\Users\ASUS\Pictures\python\TaipeiSansTCBeta-Regular.TTF'
+#設定字體路徑
+font = ImageFont.truetype(fontpath, 224)
+#透過truetype載入字體
+imgpil = Image.fromarray(img) 
+#將字體陣列轉成imgpil的影像
+draw = ImageDraw.Draw(imgpil)
+draw.text((30, 30), text, font = font, fill = (0,0,0,0)) #第4個0為透明度，0表示完全不透明
+img = np.array(imgpil)
+cv.imshow('image', img)
+cv.waitKey()
+cv.destroyAllWindows()
