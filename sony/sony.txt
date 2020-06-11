@@ -1,0 +1,9 @@
+使用自訂字型:
+    載入PIL模組下的:
+    (1) ImageFont -> ImageFont.truetype
+               載入字體
+    (2) Image -> Image formarray
+         將numpy陣列轉成PIL影像
+    (3) ImageDraw -> ImageDraw.Draw
+         在PIL影像上寫文字
+    (4) 使用text方法以設定的字型及大小寫入文字
